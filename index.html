@@ -2,10 +2,28 @@
 <html>
 <header>
     <meta charset="UTF-8">
-    <script scr="script.js"> </script>
+    <script src="script.js"> </script>
+    <link rel="stylesheet" href="stylsheet.css">
+    
 </header>
-<body>
-    <p id="string"></p>
+<body onload="test()">
+    <H1 class="headline">Se vejret for din by eller lokation</H1>
+    <div class="content">
+        <div>
+            <p id="string"></p>
+            <p id="feels"></p>
+            <p id= 'min'></p>
+            <p id='max'></p>
+            <p id="weather"></p>
+            <p id="des"></p>
+            <p id="cloudiness"></p>
+        </div>
+        <select name="citys" id="citys" onchange="selection()">
+            <option value="viborg">Viborg</option>
+        </select>
+        <input type="text"id="city" onkeydown="if(event.keyCode == 13){input();return false;}">
+        <button id="geo">find mig</button>
 
+</div>
 </body>
 </html>
